@@ -1,0 +1,131 @@
+
+
+/* Home Page Styles */
+
+.home-section {
+    padding: 4rem 0;
+    background: var(--bg-color);
+    transition: background-color var(--transition-speed) ease;
+}
+
+.home-section .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    min-height: 60vh;
+}
+
+.home-section .image img {
+    width: clamp(200px, 30vw, 400px);
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.home-section .image img:hover {
+    transform: scale(1.05);
+}
+
+.home-section .intro {
+    flex: 1;
+    max-width: 600px;
+}
+
+.home-section .intro h1 {
+    font-size: clamp(2rem, 5vw, 4rem);
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.home-section .intro .highlight {
+    color: var(--primary-accent);
+}
+
+.home-section .intro h2 {
+    font-size: clamp(1.2rem, 3vw, 2.5rem);
+    margin-bottom: 1rem;
+    color: var(--muted-text-color);
+}
+
+.home-section .intro .role {
+    color: var(--secondary-accent);
+}
+
+.home-section .intro p {
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+}
+
+.home-section .buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.home-section .btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    color: var(--text-color);
+}
+
+.home-section .primary-btn {
+    background: var(--primary-accent);
+    color: white;
+    border-color: var(--primary-accent);
+}
+
+.home-section .primary-btn:hover {
+    background: transparent;
+    color: var(--primary-accent);
+}
+
+.home-section .secondary-btn:hover {
+    background: var(--secondary-accent);
+    color: white;
+    border-color: var(--secondary-accent);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .home-section .container {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .home-section .intro {
+        order: 1;
+    }
+
+    .home-section .image {
+        order: 2;
+    }
+
+    .home-section .buttons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .home-section {
+        padding: 2rem 0;
+    }
+
+    .home-section .container {
+        gap: 1.5rem;
+    }
+
+    .home-section .btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+}
